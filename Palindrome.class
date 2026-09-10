@@ -1,0 +1,28 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.util.Scanner;
+
+public class Palindrome {
+   public Palindrome() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.print("Enter a number: ");
+      int var2 = var1.nextInt();
+      int var3 = var2;
+
+      int var4;
+      for(var4 = 0; var2 != 0; var2 /= 10) {
+         int var5 = var2 % 10;
+         var4 = var4 * 10 + var5;
+      }
+
+      if (var3 == var4) {
+         System.out.println("Palindrome number");
+      } else {
+         System.out.println("Not a palindrome number");
+      }
+
+      var1.close();
+   }
+}
